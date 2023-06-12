@@ -6,21 +6,73 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+* {
+    box-sizing: border-box; padding: 0; margin: 0;
+}
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#location-wdgt {
-    display: flex; box-shadow: 1px 1px 1px #000000; width: fit-content; padding: 5px; border-radius: 5px;
+#ui-container {
+    display: flex;
 }
-svg {
-    fill: red; 
+main {
+    background-color: #efefef; width: 70%; height: 100vh;
+}
+#sec-1 {
+    display: flex; align-items: center;
+}
+.col {
+    margin: 10px; display: flex; justify-content: center;
+}
+#home-icon {
+    border-radius: 20%;
+}
+#loc-container {
+    display: flex;
+}
+#loc-wrapper {
+    background-color: aquamarine; width: 20px; height: 20px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+}
+#loc-wrapper svg {
+    fill: rgb(48, 122, 98);
+}
+#txt-1 {
+    font-size: 120%;
+}
+#loc-text {
+    font-size: small;
+}
+aside {
+    width: 30%;
 }
         </style>
     </head>
     <body>
-        <div id="location-wdgt">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>map-marker</title><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>
-            <span>1210 Reservior Ave, Apt 2</span>
+        <div id="ui-container">
+            <main>
+                <section id="sec-1">
+                    <div class="col">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>chevron-left</title><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /></svg>
+                    </div>
+                    <div class="col">
+                        <img src="img/iot-home-1.webp" alt="" width="50" id="home-icon">
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span id="txt-1">Home</span>
+                            <div id="loc-container">
+                                <div id="loc-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"><title>map-marker</title><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>
+                                </div>
+                                <span id="loc-text">1210 Reservior Ave, Apt 2</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <aside>
+    
+            </aside>
         </div>
     </body>
 </html>
