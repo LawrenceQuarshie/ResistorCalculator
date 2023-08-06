@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Tutorials 121</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+* {
+    box-sizing: border-box; padding: 0; margin: 0;
+}
+body {
+    margin: 0px; padding: 0px; width: 100%; font-family: 'Segoe UI', sans-serif; color: black; font-size: 95%;; background-color: #ffffff; display: block; flex-direction: column;
+}
+h1 {
+    font-weight: normal;
+}
+#row1 {
+    display: flex;
+}
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="row1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>thermometer</title><path d="M15 13V5A3 3 0 0 0 9 5V13A5 5 0 1 0 15 13M12 4A1 1 0 0 1 13 5V8H11V5A1 1 0 0 1 12 4Z" /></svg>
+                <h1>Temperature Converter</h1>
+            </div>
+            <div>
+                <input type="text" id="temp-input">
+            </div>
+            <div>
+                <div>
+                    <input type="radio" value="ctof" id="ctof" name="conv"><label for="">Celcius(C) to Fahrenheit(F)</label>
+                    <input type="radio" value="ftoc" id="ftoc" name="conv"><label for="">Fahrenheit(F) to Celcius(C)</label>
+                </div>
+                    <button onclick="tempConverter()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>swap-horizontal</title><path d="M21,9L17,5V8H10V10H17V13M7,11L3,15L7,19V16H14V14H7V11Z" /></svg>
+                        <span>Convert</span>
+                    </button>
+            </div>
+            <div>
+                <div id="target1"></div>
+                <div id="target2"></div>
+            </div>
+        </main>
+    </body>
+    <script>
+        function tempConverter() {
+            let ctofVal = document.getElementById("ctof").checked;
+            let ftocVal = document.getElementById("ftoc").checked;
+            let tempInput = document.getElementById("temp-input").value;
+
+            document.getElementById("target1").innerHTML = tempInput;
+
+            if (ctofVal == 1) {
+                tempInF = Math.round((tempInput * 9/5) + 32);
+                document.getElementById("target2").innerHTML = "Temperature from Celcius to Fahrenheit is " + tempInF;
+            } else if (ftocVal == 1) {
+                tempInC = Math.round((tempInput - 32) * 5/9);
+                document.getElementById("target2").innerHTML = "Temperature from Fahrenheit to Celcius is " + tempInC;
+            }
+        }
+    </script>
+</html>
