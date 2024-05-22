@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Resistor Color Code Calculator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <style>
 div {
     border: 1px solid red; width: 155px; height: 22px; margin-top: 10px; display: flex; align-items: center; text-align: center;
@@ -19,7 +19,7 @@ div {
 <script>
     function calcResistance() {
         let a = document.querySelector("input").value;
-        let b = ["black", "brown", "red", "orange"];
+        let b = ["black", "brown", "red", "orange", "yellow", "green"];
         document.querySelector("div").innerHTML = b[a];
     }
 </script>
