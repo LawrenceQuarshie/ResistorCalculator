@@ -12,6 +12,9 @@ div {
 </head>
 <body>
     <h1>Resistance Calculator</h1>
+    <h2>4 - Band Resistance Calculator</h2>
+    <span>From color code to resistance</span>
+    <span>From resistance to color code</span>
     <input type="text">
     <button onclick="calcResistance()">Calculate</button>
     <div></div>
@@ -19,8 +22,8 @@ div {
 <script>
     function calcResistance() {
         let a = document.querySelector("input").value;
-        let b = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet"];
-        document.querySelector("div").innerHTML = b[a];
+        let b = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
+        document.querySelector("div").innerHTML = b.indexOf(a);
     }
 </script>
 </html>
