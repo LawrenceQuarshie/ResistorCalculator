@@ -8,12 +8,21 @@
 div {
     border: 1px solid red; width: 155px; height: 22px; margin-top: 10px; display: flex; align-items: center; text-align: center;
 }
+select > option#black {
+    background-color: black; color: white;
+}
     </style>
 </head>
 <body>
     <h1>Resistance Calculator</h1>
     <h2>4 - Band Resistance Calculator</h2>
     <p>From color code to resistance</p>
+    <select name="" id="">
+        <option value="" id="black">Black - 0</option>
+        <option value="">Brown - 1</option>
+        <option value="">Red - 2</option>
+        <option value="">Orange - 3</option>
+    </select>
     <input type="text">
     <button onclick="calcResistance()">Calculate</button>
     <div></div>
