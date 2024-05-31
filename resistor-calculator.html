@@ -70,6 +70,32 @@ div {
         <option value="gray" id="gray">Gray - 8</option>
         <option value="white" id="white">White - 9</option>
     </select>
+    <h3>3rd Color Band:</h3>
+    <select name="" id="select3">
+        <option value="black" id="black">Black - 0</option>
+        <option value="brown" id="brown">Brown - 1</option>
+        <option value="red" id="red">Red - 2</option>
+        <option value="orange" id="orange">Orange - 3</option>
+        <option value="yellow" id="yellow">Yellow - 4</option>
+        <option value="green" id="green">Green - 5</option>
+        <option value="blue" id="blue">Blue - 6</option>
+        <option value="violet" id="violet">Violet - 7</option>
+        <option value="gray" id="gray">Gray - 8</option>
+        <option value="white" id="white">White - 9</option>
+    </select>
+    <h3>4th Color Band:</h3>
+    <select name="" id="select4">
+        <option value="black" id="black">Black - 0</option>
+        <option value="brown" id="brown">Brown - 1</option>
+        <option value="red" id="red">Red - 2</option>
+        <option value="orange" id="orange">Orange - 3</option>
+        <option value="yellow" id="yellow">Yellow - 4</option>
+        <option value="green" id="green">Green - 5</option>
+        <option value="blue" id="blue">Blue - 6</option>
+        <option value="violet" id="violet">Violet - 7</option>
+        <option value="gray" id="gray">Gray - 8</option>
+        <option value="white" id="white">White - 9</option>
+    </select>
     <button onclick="calcResistance()">Calculate</button>
     <div>
     </div>
@@ -78,6 +104,7 @@ div {
     function calcResistance() {
         let s1 = document.querySelectorAll('#select1>option');
         let s2 = document.querySelectorAll('#select2>option');
+        let s3 = document.querySelectorAll('#select3>option');
 
         let select1stBand = [];
         for(let i = 0; i < s1.length; i++) {
@@ -94,7 +121,17 @@ div {
         let s2IndexText = document.querySelector('#select2').value;
         let secondBand = select2ndBand.indexOf(s2IndexText);
 
-        document.querySelector('div').innerHTML = firstBand.toString() + secondBand.toString() + "\u2126";
+        let select3rdBand = [];
+        for(let i = 0; i < s3.length; i++) {
+            select2ndBand[i] = s3[i].value;
+        }
+
+        let s3IndexText = document.querySelector('#select2').value;
+        let thirdBand = select2ndBand.indexOf(s3IndexText);
+
+        console.log(thirdBand);
+
+        document.querySelector('div').innerHTML = ((firstBand * (10 ** 1)) + (secondBand * (10 ** 0))) * (10 ** thirdBand) + "\u2126";
     }
 </script>
 </html>
