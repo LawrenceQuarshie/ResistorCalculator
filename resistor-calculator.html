@@ -8,8 +8,35 @@
 div {
     border: 1px solid red; width: 155px; height: 22px; margin-top: 10px; display: flex; align-items: center; text-align: center;
 }
-select > option#black {
+#black {
     background-color: black; color: white;
+}
+#brown {
+    background-color: brown; color: white;
+}
+#red {
+    background-color: red; color: white;
+}
+#orange {
+    background-color: orange; color: black;
+}
+#yellow {
+    background-color: yellow; color: black;
+}
+#green {
+    background-color: green; color: white;
+}
+#blue {
+    background-color: blue; color: white;
+}
+#violet {
+    background-color: violet; color: white;
+}
+#gray {
+    background-color: gray; color: black;
+}
+#white {
+    background-color: white; color: black;
 }
     </style>
 </head>
@@ -17,21 +44,57 @@ select > option#black {
     <h1>Resistance Calculator</h1>
     <h2>4 - Band Resistance Calculator</h2>
     <p>From color code to resistance</p>
-    <select name="" id="">
-        <option value="" id="black">Black - 0</option>
-        <option value="">Brown - 1</option>
-        <option value="">Red - 2</option>
-        <option value="">Orange - 3</option>
+    <h3>1st Color Band:</h3>
+    <select name="" id="select1">
+        <option value="black" id="black">Black - 0</option>
+        <option value="brown" id="brown">Brown - 1</option>
+        <option value="red" id="red">Red - 2</option>
+        <option value="orange" id="orange">Orange - 3</option>
+        <option value="yellow" id="yellow">Yellow - 4</option>
+        <option value="green" id="green">Green - 5</option>
+        <option value="blue" id="blue">Blue - 6</option>
+        <option value="violet" id="violet">Violet - 7</option>
+        <option value="gray" id="gray">Gray - 8</option>
+        <option value="white" id="white">White - 9</option>
     </select>
-    <input type="text">
+    <h3>2nd Color Band:</h3>
+    <select name="" id="select2">
+        <option value="black" id="black">Black - 0</option>
+        <option value="brown" id="brown">Brown - 1</option>
+        <option value="red" id="red">Red - 2</option>
+        <option value="orange" id="orange">Orange - 3</option>
+        <option value="yellow" id="yellow">Yellow - 4</option>
+        <option value="green" id="green">Green - 5</option>
+        <option value="blue" id="blue">Blue - 6</option>
+        <option value="violet" id="violet">Violet - 7</option>
+        <option value="gray" id="gray">Gray - 8</option>
+        <option value="white" id="white">White - 9</option>
+    </select>
     <button onclick="calcResistance()">Calculate</button>
-    <div></div>
+    <div>
+    </div>
 </body>
 <script>
     function calcResistance() {
-        let a = document.querySelector("input").value;
-        let b = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
-        document.querySelector("div").innerHTML = b.indexOf(a);
+        let s1 = document.querySelectorAll('#select1>option');
+        let s2 = document.querySelectorAll('#select2>option');
+
+        let select1stBand = [];
+        for(let i = 0; i < s1.length; i++) {
+            select1stBand[i] = s1[i].value;
+        }
+        let s1IndexText = document.querySelector('#select1').value;
+        let firstBand = select1stBand.indexOf(s1IndexText);
+
+        let select2ndBand = [];
+        for(let i = 0; i < s2.length; i++) {
+            select2ndBand[i] = s2[i].value;
+        }
+
+        let s2IndexText = document.querySelector('#select2').value;
+        let secondBand = select2ndBand.indexOf(s2IndexText);
+
+        document.querySelector('div').innerHTML = firstBand.toString() + secondBand.toString() + "\u2126";
     }
 </script>
 </html>
