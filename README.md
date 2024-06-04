@@ -12,4 +12,4 @@ The 4 - band color code resistor has 4 bands and the bands represent the followi
 - 1st Band: 
 - 2nd Band:
 - 3rd Band: Represents the 10 times multiplier of the band.
-- 4th Band: This represents the tolerance levels of the resistor.
+- 4th Band: This represents the tolerance levels of the resistor. This describes the level of precision that can be obtained by the resistor as some resisters are much more precise than others.

@@ -52,8 +52,8 @@
     <h3>4th Color Band:</h3>
     <select name="" id="select4">
         <option value="black" id="black">Black - 0</option>
-        <option value="brown" id="brown">Brown - 1</option>
-        <option value="red" id="red">Red - 2</option>
+        <option value="brown" id="brown">Brown - +1%</option>
+        <option value="red" id="red">Red - +2%</option>
         <option value="orange" id="orange">Orange - 3</option>
         <option value="yellow" id="yellow">Yellow - 4</option>
         <option value="green" id="green">Green - 5</option>
@@ -92,7 +92,7 @@
             select2ndBand[i] = s3[i].value;
         }
 
-        let s3IndexText = document.querySelector('#select2').value;
+        let s3IndexText = document.querySelector('#select3').value;
         let thirdBand = select2ndBand.indexOf(s3IndexText);
 
         console.log(thirdBand);
